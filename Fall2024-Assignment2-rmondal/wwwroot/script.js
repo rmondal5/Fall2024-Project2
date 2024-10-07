@@ -23,10 +23,8 @@ function apiSearch() {
             for (var i = 0; i < len; i++) {
                 results += `<p><a href="${data.webPages.value[i].url}" target="_blank">${data.webPages.value[i].name}</a>: ${data.webPages.value[i].snippet}</p>`;
             }
-
             $('#searchResults').html(results);
-            $('#searchResults').css('visibility', 'visible');
-            $('#searchResults').dialog();
+            $('#searchResults').css('visibility', 'visible'); // No dialog, just visible
         })
         .fail(function () {
             alert('Error performing search');
@@ -50,35 +48,22 @@ function luckySearch() {
         },
     })
         .done(function (data) {
-            //if (data.webPages && data.webPages.value && data.webPages.value.length > 0) {
-                var page = `<p><a href="${data.webPages.value[0].url}" target="_blank">${data.webPages.value[0].name}</a>: ${data.webPages.value[0].snippet}</p>`;
-
+            var page = `<p><a href="${data.webPages.value[0].url}" target="_blank">${data.webPages.value[0].name}</a>: ${data.webPages.value[0].snippet}</p>`;
                 $('#luckyResults').html(page);
                 $('#luckyResults').css('visibility', 'visible');
                 $('#luckyResults').dialog();
-            //} else {
-            //    alert('No search results found.');
-            //}
         })
         .fail(function () {
             alert('Error performing search');
         });
 }
 
-
-
-//// Attach the event listener to luckySearch
-//$(document).ready(function () {
-    
-//});
-
-
-
 // Function to change the background image
 var currentImage = 0;
 var images = [
-    'https://plus.unsplash.com/premium_photo-1669829639756-bf38f2b1c4a1?q=80&w=1844&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    'https://plus.unsplash.com/premium_photo-1669239112427-bfbc84fcd74c?q=80&w=1904&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+    'https://plus.unsplash.com/premium_photo-1669239112427-bfbc84fcd74c?q=80&w=1904&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    'https://plus.unsplash.com/premium_photo-1669829639756-bf38f2b1c4a1?q=80&w=1844&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+
 ];
 
 function changeBackgroundImage() {
@@ -101,15 +86,7 @@ function displayCurrentTime() {
     $('#time').dialog();
 }
 
-
 // Event listeners
-//$(document).ready(function () {
-//    $('#searchButton').click(apiSearch);
-//    $('#luckyButton').click(luckySearch);
-//    $('#searchEngineName').click(changeBackgroundImage);
-//    $('#timeButton').click(displayCurrentTime);
-//});
-
 $('#searchButton').click(apiSearch);
 $('#luckyButton').click(luckySearch); // Call the luckySearch function here
 $('#searchEngineName').click(changeBackgroundImage);
