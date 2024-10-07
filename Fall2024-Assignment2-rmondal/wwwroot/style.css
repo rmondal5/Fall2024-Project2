@@ -1,0 +1,83 @@
+/* Set the background color and image for the page */
+body {
+    background-color: white;
+    background-image: url('https://plus.unsplash.com/premium_photo-1669239112427-bfbc84fcd74c?q=80&w=1904&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: Arial, sans-serif;
+    color: #000; /* Change text color to black for better contrast */
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Style the header */
+header {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+}
+
+    header h1 {
+        margin: 0;
+        font-size: 2.5em;
+    }
+
+/* Style the main content */
+main {
+    margin-top: 50px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    font-size: 1.2em;
+    width: 300px;
+    border: none;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007BFF;
+    color: #fff;
+    cursor: pointer;
+}
+
+    button:hover {
+        background-color: #0056b3;
+    }
+
+/* Hide the search results and time divs initially */
+#searchResults, #time, #luckyResults {
+    display: none;
+    margin-top: 20px;
+}
+
+#searchResults, #luckyResults {
+    background-color: rgba(255, 255, 255, 1); /* Change to white background */
+    padding: 20px;
+    border-radius: 10px;
+    color: black; /* Ensure text is visible on white background */
+}
+
+    /* Style the links within the search results and lucky results */
+    #searchResults a, #luckyResults a {
+        color: blue; /* Change link color to blue */
+        text-decoration: none; /* Optional: Remove underline from links */
+    }
+
+        #searchResults a:hover, #luckyResults a:hover {
+            text-decoration: underline; /* Optional: Underline links on hover */
+        }
+
+/* Style the time div */
+#time {
+    background-color: rgba(255, 255, 255, 1); /* Change to white background */
+    padding: 20px;
+    border-radius: 10px;
+    color: black; /* Ensure text is visible on white background */
+}
