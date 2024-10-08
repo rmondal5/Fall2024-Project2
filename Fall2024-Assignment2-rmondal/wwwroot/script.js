@@ -24,7 +24,7 @@ function apiSearch() {
                 results += `<p><a href="${data.webPages.value[i].url}" target="_blank">${data.webPages.value[i].name}</a>: ${data.webPages.value[i].snippet}</p>`;
             }
             $('#searchResults').html(results);
-            $('#searchResults').css('visibility', 'visible'); // No dialog, just visible
+            $('#searchResults').css('visibility', 'visible');
         })
         .fail(function () {
             alert('Error performing search');
@@ -78,7 +78,7 @@ function displayCurrentTime() {
     var minutes = now.getMinutes().toString().padStart(2, '0');
     var ampm = hours >= 12 ? 'PM' : 'AM';
     hours = hours % 12;
-    hours = hours ? hours : 12; // the hour '0' should be '12'
+    hours = hours ? hours : 12;
     var currentTime = hours.toString().padStart(2, '0') + ':' + minutes + ' ' + ampm;
 
     $('#time').html(currentTime);
@@ -88,6 +88,8 @@ function displayCurrentTime() {
 
 // Event listeners
 $('#searchButton').click(apiSearch);
-$('#luckyButton').click(luckySearch); // Call the luckySearch function here
+$('#luckyButton').click(luckySearch);
 $('#searchEngineName').click(changeBackgroundImage);
 $('#timeButton').click(displayCurrentTime);
+
+//Reference: W3 Schools, Stack Overflow, GeeksforGeeks, ChatGpt

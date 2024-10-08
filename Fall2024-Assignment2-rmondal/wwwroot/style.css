@@ -21,6 +21,7 @@ header {
     header h1 {
         margin: 0;
         font-size: 2.5em;
+        color: white;
     }
 
 /* Style the main content */
@@ -81,3 +82,5 @@ button {
         #searchResults a:hover, #luckyResults a:hover {
             text-decoration: underline; /* Underline links on hover */
         }
+
+/*Reference: W3 Schools, Stack Overflow, GeeksforGeeks, ChatGpt*/
